@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: voyage-admin
+  cloud:
+    #向nacos注册服务
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml  #配置文件格式
+    #向sentinel控制台注册服务
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+      enabled: true  #取消控制台懒加载
+  profiles:
+    active: dev  #环境标识
+

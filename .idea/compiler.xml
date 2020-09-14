@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="voyage-common" />
+        <module name="voyage-user" />
+        <module name="voyage-admin" />
+        <module name="voyage-gateway" />
+        <module name="voyage-cloud-alibaba" />
+        <module name="voyage-client" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="voyage-server" target="1.8" />
+      <module name="voyage-user" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="voyage-admin" options="-parameters" />
+      <module name="voyage-client" options="-parameters" />
+      <module name="voyage-cloud-alibaba" options="-parameters" />
+      <module name="voyage-common" options="-parameters" />
+      <module name="voyage-gateway" options="-parameters" />
+      <module name="voyage-server" options="-parameters" />
+      <module name="voyage-user" options="-parameters" />
+    </option>
+  </component>
+</project>
