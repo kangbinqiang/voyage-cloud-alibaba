@@ -30,6 +30,23 @@ spring:
       test-while-idle: true
       test-on-borrow: false
       test-on-return: false
+  #mongodb
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/shop
+  #rabbitmq
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
+    # 手动提交消息
+    listener:
+      simple:
+        acknowledge-mode: manual
+      direct:
+        acknowledge-mode: manual
 
 mybatis:
   mapper-locations:
@@ -37,6 +54,15 @@ mybatis:
 logging:
   level:
     com.manage.mapper: debug
+
+#minio文件服务器
+minio:
+  url: http://121.43.149.217:9000
+  accessKey: minioadmin
+  secretKey: minioadmin
+  bucket: docs
+
+
 
 
 

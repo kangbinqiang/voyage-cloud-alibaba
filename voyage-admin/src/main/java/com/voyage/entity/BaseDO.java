@@ -16,7 +16,7 @@ public class BaseDO {
 
     @Id
     @Column(name = "id")
-    private String id;
+    private Integer id;
 
     @Column(name = "created_time")
     private Date createdTime;
@@ -29,4 +29,10 @@ public class BaseDO {
 
     @Column(name = "updated_by")
     private String updatedBy;
+
+
+    public void initArgs() {
+        this.createdTime = new Date();
+        this.updatedTime = new Date();
+    }
 }

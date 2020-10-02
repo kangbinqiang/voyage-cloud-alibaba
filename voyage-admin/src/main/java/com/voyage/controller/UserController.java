@@ -5,7 +5,6 @@ import com.voyage.common.ResponseMO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,8 +20,9 @@ public class UserController extends BaseController {
 
     @PostMapping
     @ApiOperation(value = "新增用户")
-    @RequiresPermissions("users")
+//    @RequiresPermissions("users")
     public ResponseMO add() {
         return success();
     }
+
 }
